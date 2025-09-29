@@ -33,7 +33,7 @@ def create_appointment():
     db.session.commit()
 
     logger.info("Appointment created for %s (%s)", data["name"], data["phone"])
-    return jsonify({"message": "Appointment created successfully!"}), 201
+    return jsonify({"message": "Your appointment will be confirmed."}), 201
 
 
 @api.route("/appointments", methods=["GET"])

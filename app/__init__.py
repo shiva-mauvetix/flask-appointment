@@ -24,11 +24,12 @@ def create_app():
     # app factory
     cors.init_app(
         app=app,
-        origins=[
-            "http://localhost:3000",
-            "https://slateblue-oyster-554718.hostingersite.com",
-        ],
-        # origins="*",
+        # origins=[
+        #     "http://localhost:3000",
+        #     "https://slateblue-oyster-554718.hostingersite.com",
+        #     "https://appointments.socialvave.in/",
+        # ],
+        origins="*",
         methods=["GET", "POST", "PUT", "DELETE"],
         allow_headers=[
             "Content-Type",
@@ -40,3 +41,4 @@ def create_app():
     app.register_blueprint(blueprint=api)
 
     return app
+
